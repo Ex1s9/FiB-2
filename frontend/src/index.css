@@ -1,0 +1,408 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  line-height: 1.5;
+}
+
+a {
+  color: #4f6ef7;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ─── Navbar ─────────────────────────────────────────── */
+.navbar {
+  background: #1a1a2e;
+  color: white;
+  padding: 0.9rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-brand {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #b0b8e8;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.nav-links a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-user {
+  font-size: 0.9rem;
+  color: #d0d5f0;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #b0b8e8;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.btn-link:hover {
+  color: white;
+}
+
+/* ─── Main layout ────────────────────────────────────── */
+.main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+}
+
+.empty {
+  color: #888;
+  padding: 2rem 0;
+}
+
+/* ─── Buttons ────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  background: #4f6ef7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.btn:hover {
+  background: #3a57e8;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-danger {
+  display: inline-block;
+  padding: 0.4rem 0.85rem;
+  background: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.15s;
+}
+.btn-danger:hover {
+  background: #c53030;
+}
+
+.btn-sm {
+  padding: 0.3rem 0.7rem;
+  background: #4f6ef7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  margin-right: 0.4rem;
+}
+.btn-sm:hover {
+  background: #3a57e8;
+}
+.btn-sm.btn-ghost {
+  background: #888;
+}
+.btn-sm.btn-ghost:hover {
+  background: #666;
+}
+.btn-sm.btn-danger {
+  background: #e53e3e;
+}
+.btn-sm.btn-danger:hover {
+  background: #c53030;
+}
+
+/* ─── Forms ──────────────────────────────────────────── */
+.form-container {
+  max-width: 440px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h2 {
+  margin-bottom: 1.5rem;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #dde;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #4f6ef7;
+}
+.form-container textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.form-container button[type="submit"] {
+  padding: 0.75rem;
+  background: #1a1a2e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.25rem;
+  transition: background 0.15s;
+}
+.form-container button[type="submit"]:hover {
+  background: #2d2d4e;
+}
+
+.form-container p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.error {
+  background: #fff0f0;
+  color: #c00;
+  border: 1px solid #fcc;
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ─── Page header ────────────────────────────────────── */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.page-header h2 {
+  font-size: 1.5rem;
+}
+
+/* ─── Product grid ───────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+}
+
+.card-category {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  font-weight: 600;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: #555;
+  flex: 1;
+}
+
+.card-price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.card-actions a {
+  font-size: 0.88rem;
+}
+
+/* ─── Product detail ─────────────────────────────────── */
+.detail {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  max-width: 720px;
+}
+
+.detail-category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.detail h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.detail-desc {
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.detail-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 1rem 0;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+/* ─── Role badge ─────────────────────────────────────── */
+.role-badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #e8ecff;
+  color: #4f6ef7;
+}
+.role-badge.role-admin {
+  background: #fff0e0;
+  color: #d97706;
+}
+.role-badge.role-seller {
+  background: #e0f5ea;
+  color: #16a34a;
+}
+
+.status-active {
+  color: #16a34a;
+  font-size: 0.85rem;
+}
+.status-blocked {
+  color: #dc2626;
+  font-size: 0.85rem;
+}
+
+/* ─── Users table ────────────────────────────────────── */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  margin-top: 1rem;
+}
+
+.table th {
+  background: #1a1a2e;
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #f0f0f5;
+  font-size: 0.9rem;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.row-blocked td {
+  color: #bbb;
+  background: #fafafa;
+}
+
+.table input,
+.table select {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #dde;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  max-width: 130px;
+}
+
+.actions-cell {
+  white-space: nowrap;
+}
